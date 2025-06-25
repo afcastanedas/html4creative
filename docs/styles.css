@@ -1,0 +1,56 @@
+:root {
+    --color-rosa: #F01AB7;
+    --color-naranja: #F0371A;
+    --color-rojo: #F01A37;
+    --color-violeta: #C91AF0;
+    --color-naranja-claro: #F05D1A;
+}
+
+body {
+    font-family: 'Tektur', sans-serif;
+    background: linear-gradient(135deg, var(--color-rosa) 0%, var(--color-naranja) 25%, var(--color-rojo) 50%, var(--color-violeta) 75%, var(--color-naranja-claro) 100%);
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--color-blanco);
+    text-shadow: 0 0 10px var(--color-violeta), 0 0 20px var(--color-naranja-claro);
+    letter-spacing: 2px;
+}
+
+p {
+    color: var(--color-blanco);
+    font-size: 1.2em;
+    text-shadow: 0 0 5px var(--color-rojo);
+}
+
+.imagen {
+    border: 2px solid var(--color-rosa);
+    box-shadow: 0 0 20px var(--color-violeta), 0 0 40px var(--color-naranja);
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    padding: 10px;
+    position: absolute;
+    display: none;
+}
+
+.imagen img {
+    width: 480px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 8px;
+    border: 3px solid var(--color-naranja-claro);
+    box-shadow: 0 0 15px var(--color-rosa), 0 0 30px var(--color-violeta);
+}
+
+.imagen.active {
+    display: block;
+}
+
+.imagen.active img {
+    opacity: 1;
+}
